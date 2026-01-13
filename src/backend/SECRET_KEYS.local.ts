@@ -1,1 +1,1 @@
-export const SESSION_SECRET = "hemmeligNøkkel";
+export const SESSION_SECRET = "NyHeMEliGhet!";

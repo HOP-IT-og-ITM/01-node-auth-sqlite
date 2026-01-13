@@ -1,6 +1,6 @@
 database
 script
-#**/*.local.ts
+**/*.local.ts
 
 
 # Logs
@@ -142,3 +142,4 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+src/backend/SECRET_KEYS.local.ts

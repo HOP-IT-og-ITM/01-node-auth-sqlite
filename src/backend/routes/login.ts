@@ -24,19 +24,14 @@ loginRouter.use(
 
 // --- Login-side ---
 loginRouter.get("/login", (_, res: Response) => {
-    res.sendFile(path.join(process.cwd(), "pages/private/login.html"));
+    res.sendFile(path.join(process.cwd(), "pages/public/login.html"));
 });
 
 // --- Login POST ---
 loginRouter.post("/login", (req: Request, res: Response) => {
     const { navn, passord } = req.body;
 
-    // Henter bruker og rollenavn via en JOIN
-    const sql = `
-        SELECT b.*, r.Navn as RolleNavn 
-        FROM Bruker b 
-        LEFT JOIN Rolle r ON b.RolleID = r.RolleID 
-        WHERE b.Navn = ?`;
+    const sql = `SELECT * FROM Bruker WHERE Brukernavn = ?`;
 
     db.get(sql, [navn], (err: Error | null, row: any) => {
         if (err) {
@@ -81,14 +76,9 @@ loginRouter.post("/login", (req: Request, res: Response) => {
     });
 });
 
-// --- Opprett Ny Bruker (Kun for Admin) ---
 loginRouter.post("/ny-bruker", isAuthenticated, async (req: Request, res: Response) => {
-    // Sjekk om innlogget bruker faktisk er Admin
-    if (req.session.user?.rolle == "Bruker") {
-        return res.status(403).send("Bare administratorer kan opprette brukere.");
-    }
 
-    const { navn, passord, rolleId } = req.body; // rolleId: 1 for Admin, 2 for Bruker
+    const { navn, passord } = req.body;
 
     if (!navn || !passord) {
         return res.redirect("/ny-bruker?q=Mangler+felt");
@@ -98,11 +88,10 @@ loginRouter.post("/ny-bruker", isAuthenticated, async (req: Request, res: Respon
         if (row) return res.redirect("/ny-bruker?q=Eksisterer+allerede");
 
         const hash = await bcrypt.hash(passord, 10);
-        const targetRolle = rolleId || 2; // Standard til vanlig 'Bruker'
 
         db.run(
-            "INSERT INTO Bruker (Navn, Passord, RolleID) VALUES (?, ?, ?)",
-            [navn, hash, targetRolle],
+            "INSERT INTO Bruker (Navn, Passord) VALUES (?, ?, ?)",
+            [navn, hash],
             (err) => {
                 if (err) return res.redirect("/ny-bruker?q=Feil+ved+opprettelse");
                 res.redirect("/admin?q=Bruker+opprettet");
