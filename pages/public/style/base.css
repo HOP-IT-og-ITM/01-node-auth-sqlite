@@ -17,12 +17,13 @@ body {
 
 body {
     display: grid;
-    grid-template-rows: auto 1fr;
+    grid-template-rows: auto 1fr auto;
 }
 
 
 main,
 header,
+footer,
 aside {
     line-height: normal;
 }
@@ -36,8 +37,8 @@ html {
     font-size: clamp(0.8em, 1.5vw, 1.2em);
 
     /* Fonts */
-    --font-header: "Handlee", sans-serif;
-    --font-header-weight: 400;
+    --font-header: "Montserrat", sans-serif;
+    --font-header-weight: 600;
     --font-header-style: normal;
 
     --font-paragraph: "Handlee", sans-serif;
