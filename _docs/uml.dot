@@ -1,0 +1,43 @@
+graph G {
+    db [ label = "Bilde", shape= "cylinder" ];
+    folder [ label = "Bildefiler", shape = "folder" ];
+
+    subgraph tables{
+        node [shape=plaintext];
+        upload [ label =<
+            <TABLE> 
+                <TR><TD> /api/b-p/upload </TD></TR>
+                <TR><TD> Laster opp informasjon </TD></TR>
+            </TABLE>
+        >, color = red ];
+
+        update [ label =<
+            <TABLE> 
+                <TR><TD> "/api/b-p/update-info" </TD></TR>
+                <TR><TD> Endrer informasjon</TD></TR>
+            </TABLE>
+        >, color = red ];
+
+        bibliotek [ label =<
+            <TABLE> 
+                <TR><TD> /api/b-g/bibliotek/:id/bilder" </TD></TR>
+                <TR><TD> Finner info om bibiliotek </TD></TR>
+            </TABLE>
+        >, color = red ];
+
+        bilde [ label =<
+            <TABLE> 
+                <TR><TD> /api/b-g/bilde/:filename </TD></TR>
+                <TR><TD> Henter bilder fra server </TD></TR>
+            </TABLE>
+        >]
+    }
+  
+    upload -- db;
+    update -- db;
+    update -- upload [ style = dotted ];
+    upload -- folder [ color = blue ];
+    bibliotek -- db;
+    bilde -- folder;
+    bilde -- bibliotek [ style = dotted ];
+}
