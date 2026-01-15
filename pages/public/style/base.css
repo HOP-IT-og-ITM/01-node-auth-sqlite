@@ -127,8 +127,10 @@ button:hover {
 }
 
 header {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 
@@ -147,3 +149,12 @@ footer>div {
     line-height: 2em;
 }
 
+header>img {
+    width: 6rem;
+    height: auto;
+}
+
+header>h1>img {
+    width: 4rem;
+    height: auto;
+}
