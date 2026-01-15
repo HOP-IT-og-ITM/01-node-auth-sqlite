@@ -125,3 +125,18 @@ button {
 button:hover {
     background: hsla(191, 94%, 70%);
 }
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    padding: 1em;
+    border-top: .5px solid grey;
+}
+
+footer>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 2em;
+}
