@@ -47,7 +47,7 @@ html {
 
     /*--------------------------------------------------*/
     /* Colors */
-    --text-color: hsl(191, 94%, 19%);
+    --text-color: rgb(3, 77, 94);
     --background-color: hsl(191, 94%, 95%);
 }
 
@@ -131,6 +131,8 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-bottom: 1px solid rgb(0, 0, 0);
+
 }
 
 
@@ -150,11 +152,9 @@ footer>div {
 }
 
 header>img {
-    width: 6rem;
+    width: 7rem;
     height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
-header>h1>img {
-    width: 4rem;
-    height: auto;
-}
