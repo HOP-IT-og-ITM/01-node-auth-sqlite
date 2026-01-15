@@ -125,3 +125,9 @@ button {
 button:hover {
     background: hsla(191, 94%, 70%);
 }
+
+header {
+    display: grid;
+    justify-content: center;
+}
+
