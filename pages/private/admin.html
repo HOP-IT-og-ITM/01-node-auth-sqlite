@@ -1,11 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
+
 <body>
-    Pålogget
+    <main>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">Ny Bruker</a>
+            <a href="#">login</a>
+            <a href="#">Ny PC</a>
+            <a href="#">Rediger</a>
+        </div>
+        <div id="main">
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+        </div>
+        You're in
+    </main>
 </body>
+<script>
+    function openNav() {
+        mySidenav.style.width = "250px";
+        main.style.marginLeft = "250px";
+        main.class.List.add("dimmed");
+    }
+
+    function closeNav() {
+        mySidenav.style.width = "0";
+        main.style.marginLeft = "0";
+        main.classList.remove("dimmed");
+    }
+
+</script>
+
 </html>
