@@ -7,7 +7,7 @@ import bcrypt from "bcrypt";
 import crypto from "crypto";
 import path from "path";
 import { db } from "../db/database"; // Pass på at denne peker til din nye db-fil
-import { isAuthenticated } from "../middleware/isAuthenticated.js";
+//import { isAuthenticated } from "../middleware/isAuthenticated.js";
 
 export const loginRouter = Router();
 
@@ -76,25 +76,27 @@ loginRouter.post("/login", (req: Request, res: Response) => {
     });
 });
 
-loginRouter.post("/ny-bruker", isAuthenticated, async (req: Request, res: Response) => {
+loginRouter.post("/ny-bruker", async (req: Request, res: Response) => {
 
     const { navn, passord } = req.body;
 
     if (!navn || !passord) {
-        return res.redirect("/ny-bruker?q=Mangler+felt");
+        return res.redirect("/login?q=Mangler+felt");
     }
 
-    db.get("SELECT * FROM Bruker WHERE Navn = ?", [navn], async (_err, row) => {
-        if (row) return res.redirect("/ny-bruker?q=Eksisterer+allerede");
+    db.get("SELECT * FROM Bruker WHERE Brukernavn = ?", [navn], async (_err, row) => {
+        if (row) return res.redirect("/login?q=Eksisterer+allerede");
 
         const hash = await bcrypt.hash(passord, 10);
-
         db.run(
-            "INSERT INTO Bruker (Navn, Passord) VALUES (?, ?, ?)",
+            "INSERT INTO Bruker (Brukernavn, Passord) VALUES (?, ?)",
             [navn, hash],
             (err) => {
-                if (err) return res.redirect("/ny-bruker?q=Feil+ved+opprettelse");
-                res.redirect("/admin?q=Bruker+opprettet");
+                if (err) {
+                    console.log(err)
+                    return res.redirect("/login?q=Feil+ved+opprettelse")
+                };
+                res.redirect("/login?q=Bruker+opprettet");
             }
         );
     });
