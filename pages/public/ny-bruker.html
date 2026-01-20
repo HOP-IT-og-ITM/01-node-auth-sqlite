@@ -2,16 +2,16 @@
 <html lang="nb">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login | !!MyPage Name Of My Page!!</title>
+    <script src="./script/header-footer.js" defer></script>
+    <link rel="stylesheet" href="./style/base.css">
+    <title>Ny bruker | hopfiks.no</title>
 </head>
 
 <body>
-    <h1>Pålogging</h1>
+    <h1>Ny bruker</h1>
 
     <div class="login-form">
-        <form method="POST" action="/login">
+        <form method="POST" action="/ny-bruker">
             <div>
                 <label for="navn">brukernavn</label>
                 <input id="navn" name="navn" type="text" required>
@@ -21,7 +21,7 @@
                 <input id="passord" name="passord" type="password" required>
             </div>
             <div>
-                <button type="submit">logg inn</button>
+                <button type="submit">Oppret ny bruker</button>
             </div>
         </form>
 
