@@ -107,7 +107,7 @@ html {
 
     /*--------------------------------------------------*/
     /* Colors */
-    --text-color: hsl(191, 94%, 19%);
+    --text-color: hsl(0, 0%, 100%);
     --background-color: hsl(191, 94%, 95%);
 }
 
@@ -133,6 +133,46 @@ body {
     font-weight: var(--font-paragraph-weight);
     font-style: var(--font-paragraph-style);
     color: var(--text-color);
+}
+
+
+
+button {
+    font-size: 1rem;
+    font-family: var(--font-paragraph);
+    font-weight: var(--font-paragraph-weight);
+    font-style: var(--font-paragraph-style);
+    color: var(--text-color);
+    padding: .5em;
+    background: hsla(191, 94%, 50%);
+    min-height: 50px;
+    min-width: 50px;
+    border-radius: .5em;
+}
+
+button:hover {
+    background: hsla(191, 94%, 70%);
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    padding: 1em;
+    border-top: .5px solid grey;
+}
+
+footer>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 2em;
+}
+
+
+
+.login-form{
+    border: 2px solid black;
 }
 
 .login-form {
@@ -167,36 +207,4 @@ input:-webkit-autofill {
     position: absolute;
     top: -1.25em;
     z-index: 10;
-}
-
-button {
-    font-size: 1rem;
-    font-family: var(--font-paragraph);
-    font-weight: var(--font-paragraph-weight);
-    font-style: var(--font-paragraph-style);
-    color: var(--text-color);
-    padding: .5em;
-    background: hsla(191, 94%, 50%);
-    min-height: 50px;
-    min-width: 50px;
-    border-radius: .5em;
-}
-
-button:hover {
-    background: hsla(191, 94%, 70%);
-}
-
-footer {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    padding: 1em;
-    border-top: .5px solid grey;
-}
-
-footer>div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    line-height: 2em;
 }
