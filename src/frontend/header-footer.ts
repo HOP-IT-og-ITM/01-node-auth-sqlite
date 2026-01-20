@@ -15,7 +15,7 @@
     `;
     const header = document.createElement("header");
     const footer = document.createElement("footer");
-    header.innerHTML = "<h1> YO dude</h1>";
+    //header.innerHTML = "<h1> YO dude</h1>";
     body.prepend(header);
     body.appendChild(footer);
 
