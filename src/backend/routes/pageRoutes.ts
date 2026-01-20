@@ -11,6 +11,6 @@ pageRouter.get("/admin", isAuthenticated, (_req: Request, res: Response) => {
     res.sendFile(path.join(process.cwd(), "pages/private/admin.html"));
 });
 
-pageRouter.get("/admin", (_req: Request, res: Response) => {
+pageRouter.get("/om-oss", (_req: Request, res: Response) => {
     res.sendFile(path.join(process.cwd(), "pages/public/om-oss.html"));
 });
