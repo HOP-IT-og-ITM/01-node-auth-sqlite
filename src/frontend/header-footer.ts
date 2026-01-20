@@ -15,10 +15,10 @@
     `;
     const header = document.createElement("header");
     const footer = document.createElement("footer");
-    header.innerHTML = "<h1> YO dude</h1>";
+    //header.innerHTML = "<h1> YO dude</h1>";
     body.prepend(header);
     body.appendChild(footer);
-
+    
     //Creating the FOOTER!👍
     const redaktør = document.createElement("div");
     const bilde = document.createElement("div");
@@ -41,5 +41,30 @@
     const skolen = document.createElement("a");
     skolen.innerText = "Finn ut mer om skolen vår!";
     om.append(omOss, skolen);
+
+    //Creating header
+    const bruger = document.createElement("div")
+    bruger.id = "burger-manu"
+    const facebook = document.createElement("div")
+    facebook.id = "facebook-logo"
+    const logo = document.createElement("div")
+    logo.id = "hopfiks-logo"
+    header.append(bruger, facebook, logo)
+
+    const logoIMG = document.createElement("img")
+    logoIMG.src = "./img/rabbit.svg";
+    logo.append(logoIMG)
+
+    const brugerIMG = document.createElement("img")
+    brugerIMG.src = "./img/burger.svg";
+    bruger.append(brugerIMG)
+
+    const facebookIMG = document.createElement("img")
+    facebookIMG.src = ".img/Facebook_Logo_(2019).png";
+    facebook.append(facebookIMG)
+    
+
+
+
 })();
 

@@ -151,10 +151,26 @@ footer>div {
     line-height: 2em;
 }
 
-header>img {
+header>#hopfiks-logo{
     width: 7rem;
     height: auto;
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 14px;
 }
 
+#burger-menu {
+    position: absolute;
+    top: 1rem;
+    left: 10px;
+    padding: 12px;
+    height: 6rem;
+}
+
+#facebook-logo {
+    position: absolute;
+    top: 2rem;
+    right: 10px;
+    width: 5rem;
+    padding: 10px;
+    margin: 10px;
+}
