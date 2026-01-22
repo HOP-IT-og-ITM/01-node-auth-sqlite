@@ -100,7 +100,7 @@ button {
     padding: .5em;
     background: hsla(191, 94%, 50%);
     min-height: 50px;
-    min-width: 216px;
+    min-width: 260px;
     border-radius: .5em;
 }
 
@@ -126,7 +126,7 @@ footer>div {
 
 
 
-    
+/* login og ny bruker */
 
 .login-form {
     display: flex;
