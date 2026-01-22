@@ -174,3 +174,44 @@ footer>div {
 }
 
 
+/* produkter */
+
+
+.pc-row {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid #2a2f3a;
+}
+
+.pc-row img {
+  width: 160px;
+  border-radius: 6px;
+}
+
+
+.pc-info {
+  flex: 1;
+}
+
+
+.pris {
+  font-size: 1.1rem;
+  color: #58a6ff;
+  margin-right: 1rem;
+}
+
+.Produkter-button {
+  padding: 0.5rem 1.2rem;
+  background: transparent;
+  border: 1px solid #58a6ff;
+  color: #58a6ff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.Produkter-button:hover {
+  background: #58a6ff;
+  color: #000;
+}
