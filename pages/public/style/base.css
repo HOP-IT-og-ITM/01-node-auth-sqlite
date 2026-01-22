@@ -19,6 +19,7 @@ body {
 body {
     display: grid;
     grid-template-rows: auto 1fr auto;
+    place-items: center;
 }
 
 
@@ -99,7 +100,7 @@ button {
     padding: .5em;
     background: hsla(191, 94%, 50%);
     min-height: 50px;
-    min-width: 50px;
+    min-width: 216px;
     border-radius: .5em;
 }
 
@@ -137,10 +138,15 @@ footer>div {
     text-align: end;
     border: 2px solid black;
     border-radius: 15px;
-    margin-left: auto;
+
     padding: 30px;
 
 }
+
+.login-form > h1 {
+    padding-bottom: 25px;
+}
+
 
 
 .login-form input {
@@ -166,3 +172,5 @@ footer>div {
     top: -1.25em;
     z-index: 10;
 }
+
+
