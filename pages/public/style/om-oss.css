@@ -3,13 +3,15 @@
 #om-oss {
     border: 2px solid black;
     padding: 20px;
-    margin: 200px;
+    margin: 180px;
     display: flex;
     align-content: center;
     border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.4); 
 }
 
 body {
+    overflow: hidden;
     background-image: url("../img/om-oss.png");
     background-repeat: no-repeat;
     background-size: cover;
