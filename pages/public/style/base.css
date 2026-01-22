@@ -183,6 +183,7 @@ footer>div {
   gap: 1.5rem;
   padding: 1rem 0;
   border-bottom: 1px solid #2a2f3a;
+
 }
 
 .pc-row img {
@@ -214,4 +215,8 @@ footer>div {
 .Produkter-button:hover {
   background: #58a6ff;
   color: #000;
+}
+
+.pc-container > h1{
+    text-align: center;
 }
