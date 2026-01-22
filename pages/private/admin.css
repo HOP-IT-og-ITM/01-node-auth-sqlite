@@ -1,20 +1,103 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Lato", sans-serif;
   transition: background-color .5s;
-  background-color: red;
+
+}
+
+#headertext {
+  font-size: 23px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+main {
+  height: 40rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background-image: url("../public/img/Headerbild_Blog.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+footer {
+  height: 50px;
+  background-image: url("../public/img/name.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+#grad1 {
+  display: flex;
+  height: 4.5rem;
+  background-image: linear-gradient(to right, #006666, #00ffff);
+  justify-content: center;
+  align-items: center;
+}
+
+.about-card {
+  color: black;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  margin-top: 3rem;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  height: 35rem;
+  width: 40rem;
+  align-self: center;
+  justify-content: center;
+  display: flex;
+  word-break: break-all;
 }
 
 .sidenav {
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   top: 0;
   left: 0;
   background-color: #111;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: opacity 0.5s;
+  pointer-events: none;
+  z-index: 1;
+}
+
+#overlay.show {
+  opacity: 3;
+  pointer-events: auto;
 }
 
 .sidenav a {
@@ -27,7 +110,7 @@ body {
 }
 
 .sidenav a:hover {
-  color: #f1f1f1;
+  color: #00ffff;
 }
 
 .sidenav .closebtn {
@@ -43,11 +126,12 @@ body {
   padding: 16px;
 }
 
-#main.dimmed {
-    background-color: rgba(0,0,0,0.4)
-}
-
 @media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+  .sidenav {
+    padding-top: 15px;
+  }
+
+  .sidenav a {
+    font-size: 18px;
+  }
 }
