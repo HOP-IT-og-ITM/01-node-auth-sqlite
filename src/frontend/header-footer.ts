@@ -20,6 +20,8 @@
     body.prepend(header);
     body.appendChild(footer);
     
+    console.log("test")
+
     //Creating the FOOTER!👍
     const redaktør = document.createElement("div");
     const bilde = document.createElement("div");
@@ -46,11 +48,14 @@
     //Creating header
     const bruger = document.createElement("div")
     bruger.id = "burger-manu"
-    const facebook = document.createElement("div")
+
+    const facebook = document.createElement("a")
     facebook.id = "facebook-logo"
+    facebook.href ="https://www.facebook.com/profile.php?id=61585411492643"
+
     const logo = document.createElement("div")
     logo.id = "hopfiks-logo"
-    header.append(bruger, facebook, logo)
+    header.append(bruger, logo, facebook)
 
     const logoIMG = document.createElement("img")
     logoIMG.src = "./img/rabbit.svg";
@@ -61,7 +66,7 @@
     bruger.append(brugerIMG)
 
     const facebookIMG = document.createElement("img")
-    facebookIMG.src = ".img/Facebook_Logo_(2019).png";
+    facebookIMG.src = "./img/Facebook_Logo_(2019).png";
     facebook.append(facebookIMG)
     
 

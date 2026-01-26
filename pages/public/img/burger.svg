@@ -18,25 +18,25 @@
      width="18"
      height="2.4000001"
      rx="1.2"
-     fill="#000000"
+     fill="#ffffff"
      id="rect1"
-     style="fill:#034d5e;fill-opacity:1" />
+     style="fill:#ffffff;fill-opacity:1" />
   <rect
      x="3"
      y="11"
      width="18"
      height="2.4000001"
      rx="1.2"
-     fill="#000000"
+     fill="#ffffff"
      id="rect2"
-     style="fill:#034d5e;fill-opacity:1" />
+     style="fill:#ffffff;fill-opacity:1" />
   <rect
      x="3"
      y="17"
      width="18"
      height="2.4000001"
      rx="1.2"
-     fill="#000000"
+     fill="#ffffff"
      id="rect3"
-     style="fill:#034d5e;fill-opacity:1" />
+     style="fill:#ffffff;fill-opacity:1" />
 </svg>
