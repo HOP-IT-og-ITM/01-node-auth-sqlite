@@ -2,48 +2,47 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<title>Produkter | hopfiks.no</title>
     <script src="./script/header-footer.js" defer></script>
     <link rel="stylesheet" href="./style/base.css">
 </head>
-
 <body>
-    <header>
-        <div id="grad1">
-            <div id="mySidenav" class="sidenav">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <a href="#">About</a>
-                <a href="#">Services</a>
-                <a href="#">Clients</a>
-                <a href="#">Contact</a>
-            </div>
-            <div id="main">
-                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
-            </div>
-        </div>
-    </header>
 
-    <main>
 
-    </main>
-    <footer>
 
-    </footer>
+<div class="pc-container">
+    <h1>PCs</h1>
+  <div class="pc-row">
+    <img src="./img/test-pc1.avif" alt="PC">
+    <div class="pc-info">
+      <h3>GTX 670</h3>
+      <p>Ryzen 5 ·8GB RAM · 512GB SSD</p>
+    </div>
+    <span class="pris">999 kr</span>
+    <button class="Produkter-button">View</button>
+  </div>
+
+  <div class="pc-row">
+    <img src="./img/test-pc1.avif" alt="PC">
+    <div class="pc-info">
+      <h3>Ingen Gpu</h3>
+      <p>Ryzen 3 · 8GB RAM · 512GB SSD</p>
+    </div>
+    <span class="pris">899 kr</span>
+    <button class="Produkter-button">View</button>
+  </div>
+
+  <div class="pc-row">
+    <img src="./img/test-pc1.avif" alt="PC">
+    <div class="pc-info">
+      <h3>GTX 1650</h3>
+      <p>Ryzen 4 · 8GB RAM · 512GB SSD</p>
+    </div>
+    <span class="pris">1200 kr</span>
+    <button class="Produkter-button">View</button>
+  </div>
+
+</div>
+
 </body>
-<script>
-    function openNav() {
-        document.getElementById("mySidenav").style.width = "250px";
-        document.getElementById("main").style.marginLeft = "250px";
-        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-    }
-
-    function closeNav() {
-        document.getElementById("mySidenav").style.width = "0";
-        document.getElementById("main").style.marginLeft = "0";
-        document.body.style.backgroundColor = "white";
-    }
-</script>
-
 </html>

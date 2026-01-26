@@ -1,11 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="admin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght,ELSH@100..900,2&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../public/img/Favicon.png">
+    <title>Admin_Panel</title>
 </head>
+
 <body>
-    Pålogget
+    <header>
+        <div id="grad1">
+            <div id="headertext">
+                <p>Admin Panel</p>
+            </div>
+            <div id="overlay" onclick="closeNav()"></div>
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="../public/ny-bruker.html">Ny Bruker</a>
+                <a href="../public/login.html">login</a>
+                <a href="../public/Ny_PC.html">Ny PC</a>
+                <a href="#">Rediger</a>
+            </div>
+            <div id="main">
+                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- Add content -->
+        <div class="about-card">
+            Add content here
+        </div>
+    </main>
+    <footer>
+        <!--hop logo-->
+    </footer>
 </body>
+<script>
+    function openNav() {
+        mySidenav.style.width = "250px";
+        main.style.marginLeft = "250px";
+        overlay.classList.add("show");
+    }
+
+    function closeNav() {
+        mySidenav.style.width = "0";
+        main.style.marginLeft = "0";
+        overlay.classList.remove("show");
+    }
+</script>
 </html>
