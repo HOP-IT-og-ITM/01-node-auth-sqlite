@@ -68,9 +68,8 @@
     const facebookIMG = document.createElement("img")
     facebookIMG.src = "./img/Facebook_Logo_(2019).png";
     facebook.append(facebookIMG)
-    
 
-
+    //jeg vet ikke hva jeg gjøre jeg prøver, men ingen ting funker
 
 })();
 
