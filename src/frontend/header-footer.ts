@@ -57,21 +57,23 @@
     const facebookIMG = document.createElement("img")
     facebookIMG.src = "./img/Facebook_Logo_(2019).png";
     facebookWrapper.append(facebookIMG)
-    
+
+    //Bruger
+
     const burgerIMG = document.createElement("img")
     burgerIMG.src = "./img/burger.svg";
     burger.append(burgerIMG)
+
     
+    //Logo
+
     const logo = document.createElement("div")
     logo.id = "hopfiks-logo"
     header.append(burger, logo, facebookWrapper)
-    
+
     const logoIMG = document.createElement("img")
     logoIMG.src = "./img/rabbit.svg";
     logo.append(logoIMG)
-
-
-
 
 
 
@@ -79,15 +81,100 @@
     
     const menuDiv = document.createElement('div')
     menuDiv.id = "burger-menu-content"
-    
-    menuDiv.innerText = "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum "
     header.append(menuDiv)
     
-    const closeButton = document.createElement('div')
+    //close button
+    
+    
+    const closeButton = document.createElement('button')
     closeButton.id = "closeButton"
     closeButton.innerText = "X"
     menuDiv.append(closeButton)
-
     
+    
+    //lukkefunksjon
+    
+    function closeMenu() {
+        menuDiv.style.display = 'none'
+    }
+    
+    //Eventlistener close
+    
+    closeButton.addEventListener('click', closeMenu)
+    
+    // åpenfunksjon
+
+    function åpenMenu () {
+        menuDiv.style.display = 'block'
+    }
+
+    // Eventlistener åpen
+
+    burger.addEventListener('click', åpenMenu)
+
+    //
+
+
+    // Om oss button
+
+    const omOssButton = document.createElement('button')
+    omOssButton.id = "omOssButton"
+    omOssButton.innerText = "Om oss"
+
+    menuDiv.append(omOssButton)
+
+    // OmossFunksjon
+
+    function OmOssClick() {
+        window.location.href = "./om-oss.html";
+    }
+
+    // Eventlistener om oss
+
+    omOssButton.addEventListener('click', OmOssClick)
+    
+
+    //Produket button
+
+    const produketButton = document.createElement('button')
+    produketButton.id = "produketButton"
+    produketButton.innerText = "Produkter"
+
+    menuDiv.append(produketButton)
+
+
+    //produketFunksjon
+
+    function produketClick() {
+        window.location.href = "./produkter.html";
+    }
+
+
+    // Eventlistener produket
+
+    produketButton.addEventListener('click', produketClick)
+
+
+    // Login button
+    
+    const loginButton = document.createElement('button')
+    loginButton.id = "loginButton"
+    loginButton.innerText = "Login"
+
+    menuDiv.append(loginButton)
+
+
+    //Loginfunksjon
+
+    function loginClick () {
+        window.location.href = "./login.html"
+    }
+
+
+    // Eventlistener login
+
+    loginButton.addEventListener('click', loginClick)
+    
+
 })();
 
