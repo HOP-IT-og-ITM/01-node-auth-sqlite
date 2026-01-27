@@ -38,6 +38,7 @@ main {
 }
 
 footer {
+  background-color: #1B262E;
   height: 50px;
   background-image: url("../public/img/name.svg");
   background-repeat: no-repeat;
