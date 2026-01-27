@@ -30,10 +30,6 @@ aside {
     line-height: normal;
 }
 
-header {
-    
-}
-
 main {
     background-image: url(../img/Headerbild_Blog.jpg);
     background-repeat: no-repeat;
@@ -41,6 +37,7 @@ main {
     background-size: cover;
     background-position: center;
 }
+
 
 /* Set base font properties */
 html {
