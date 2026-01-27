@@ -7,7 +7,7 @@ import bcrypt from "bcrypt";
 import crypto from "crypto";
 import path from "path";
 import { db } from "../db/database"; // Pass på at denne peker til din nye db-fil
-//import { isAuthenticated } from "../middleware/isAuthenticated.js";
+import { isAuthenticated } from "../middleware/isAuthenticated.js";
 
 export const loginRouter = Router();
 
@@ -76,7 +76,7 @@ loginRouter.post("/login", (req: Request, res: Response) => {
     });
 });
 
-loginRouter.post("/ny-bruker", async (req: Request, res: Response) => {
+loginRouter.post("/ny-bruker", isAuthenticated, async (req: Request, res: Response) => {
 
     const { navn, passord } = req.body;
 
