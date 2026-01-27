@@ -20,6 +20,8 @@
     body.prepend(header);
     body.appendChild(footer);
 
+    console.log("test")
+
     //Creating the FOOTER!👍
     const redaktør = document.createElement("div");
     const bilde = document.createElement("div");
@@ -42,5 +44,137 @@
     const skolen = document.createElement("a");
     skolen.innerText = "Finn ut mer om skolen vår!";
     om.append(omOss, skolen);
+
+    //Creating header
+    const burger = document.createElement("div")
+    burger.id = "burger-manu"
+
+    // Facebook image
+    const facebookWrapper = document.createElement("a")
+    facebookWrapper.id = "facebook-logo"
+    facebookWrapper.href = "https://www.facebook.com/profile.php?id=61585411492643"
+
+    const facebookIMG = document.createElement("img")
+    facebookIMG.src = "./img/Facebook_Logo_(2019).png";
+    facebookWrapper.append(facebookIMG)
+
+    //Bruger
+
+    const burgerIMG = document.createElement("img")
+    burgerIMG.src = "./img/burger.svg";
+    burger.append(burgerIMG)
+
+    
+    //Logo
+
+    const logo = document.createElement("div")
+    logo.id = "hopfiks-logo"
+    header.append(burger, logo, facebookWrapper)
+
+    const logoIMG = document.createElement("img")
+    logoIMG.src = "./img/rabbit.svg";
+    logo.append(logoIMG)
+
+
+
+    //menu
+    
+    const menuDiv = document.createElement('div')
+    menuDiv.id = "burger-menu-content"
+    header.append(menuDiv)
+    
+    //close button
+    
+    
+    const closeButton = document.createElement('button')
+    closeButton.id = "closeButton"
+    closeButton.innerText = "X"
+    menuDiv.append(closeButton)
+    
+    
+    //lukkefunksjon
+    
+    function closeMenu() {
+        menuDiv.style.display = 'none'
+    }
+    
+    //Eventlistener close
+    
+    closeButton.addEventListener('click', closeMenu)
+    
+    // åpenfunksjon
+
+    function åpenMenu () {
+        menuDiv.style.display = 'block'
+    }
+
+    // Eventlistener åpen
+
+    burger.addEventListener('click', åpenMenu)
+
+    //
+
+
+    // Om oss button
+
+    const omOssButton = document.createElement('button')
+    omOssButton.id = "omOssButton"
+    omOssButton.innerText = "Om oss"
+
+    menuDiv.append(omOssButton)
+
+    // OmossFunksjon
+
+    function OmOssClick() {
+        window.location.href = "./om-oss.html";
+    }
+
+    // Eventlistener om oss
+
+    omOssButton.addEventListener('click', OmOssClick)
+    
+
+    //Produket button
+
+    const produketButton = document.createElement('button')
+    produketButton.id = "produketButton"
+    produketButton.innerText = "Produkter"
+
+    menuDiv.append(produketButton)
+
+
+    //produketFunksjon
+
+    function produketClick() {
+        window.location.href = "./produkter.html";
+    }
+
+
+    // Eventlistener produket
+
+    produketButton.addEventListener('click', produketClick)
+
+
+    // Login button
+    
+    const loginButton = document.createElement('button')
+    loginButton.id = "loginButton"
+    loginButton.innerText = "Login"
+
+    menuDiv.append(loginButton)
+
+
+    //Loginfunksjon
+
+    function loginClick () {
+        window.location.href = "./login.html"
+    }
+
+
+    // Eventlistener login
+
+    loginButton.addEventListener('click', loginClick)
+    
+
 })();
 
