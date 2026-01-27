@@ -247,5 +247,13 @@ header>#hopfiks-logo>img{
     height: 100%;
 }
 
+#burger-menu-content{
+    position: absolute;
+    top:0px;
+    background-color: rgb(103, 134, 155);
+    width: 20vw;
+    color: rgb(179, 219, 245);
+}
+
 
 

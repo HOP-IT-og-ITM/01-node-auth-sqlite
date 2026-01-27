@@ -19,7 +19,7 @@
     //header.innerHTML = "<h1> YO dude</h1>";
     body.prepend(header);
     body.appendChild(footer);
-    
+
     console.log("test")
 
     //Creating the FOOTER!👍
@@ -46,30 +46,48 @@
     om.append(omOss, skolen);
 
     //Creating header
-    const bruger = document.createElement("div")
-    bruger.id = "burger-manu"
+    const burger = document.createElement("div")
+    burger.id = "burger-manu"
 
-    const facebook = document.createElement("a")
-    facebook.id = "facebook-logo"
-    facebook.href ="https://www.facebook.com/profile.php?id=61585411492643"
+    // Facebook image
+    const facebookWrapper = document.createElement("a")
+    facebookWrapper.id = "facebook-logo"
+    facebookWrapper.href = "https://www.facebook.com/profile.php?id=61585411492643"
 
+    const facebookIMG = document.createElement("img")
+    facebookIMG.src = "./img/Facebook_Logo_(2019).png";
+    facebookWrapper.append(facebookIMG)
+    
+    const burgerIMG = document.createElement("img")
+    burgerIMG.src = "./img/burger.svg";
+    burger.append(burgerIMG)
+    
     const logo = document.createElement("div")
     logo.id = "hopfiks-logo"
-    header.append(bruger, logo, facebook)
-
+    header.append(burger, logo, facebookWrapper)
+    
     const logoIMG = document.createElement("img")
     logoIMG.src = "./img/rabbit.svg";
     logo.append(logoIMG)
 
-    const brugerIMG = document.createElement("img")
-    brugerIMG.src = "./img/burger.svg";
-    bruger.append(brugerIMG)
 
-    const facebookIMG = document.createElement("img")
-    facebookIMG.src = "./img/Facebook_Logo_(2019).png";
-    facebook.append(facebookIMG)
 
-    //jeg vet ikke hva jeg gjøre jeg prøver, men ingen ting funker
 
+
+
+    //menu
+    
+    const menuDiv = document.createElement('div')
+    menuDiv.id = "burger-menu-content"
+    
+    menuDiv.innerText = "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum "
+    header.append(menuDiv)
+    
+    const closeButton = document.createElement('div')
+    closeButton.id = "closeButton"
+    closeButton.innerText = "X"
+    menuDiv.append(closeButton)
+
+    
 })();
 
