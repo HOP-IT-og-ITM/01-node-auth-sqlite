@@ -102,3 +102,15 @@ loginRouter.post("/ny-bruker", isAuthenticated, async (req: Request, res: Respon
     });
 });
 
+// --- Logout ---
+loginRouter.get("/logout", (req: Request, res: Response) => {
+    const token = req.cookies?.["remember"];
+    if (token) {
+        const tokenHash = crypto.createHash("sha256").update(token).digest("hex");
+        db.run("DELETE FROM LoginToken WHERE Token = ?", [tokenHash]);
+    }
+    res.clearCookie("remember");
+    req.session.destroy(() => {
+        res.redirect("/login");
+    });
+});
