@@ -31,7 +31,6 @@ main {
   justify-content: center;
   align-items: center;
   display: flex;
-  background-image: url("../public/img/Headerbild_Blog.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -40,7 +39,7 @@ main {
 footer {
   background-color: #1B262E;
   height: 50px;
-  background-image: url("../public/img/name.svg");
+  background-image: url("../img/name.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
