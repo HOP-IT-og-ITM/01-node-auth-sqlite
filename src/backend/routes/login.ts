@@ -1,8 +1,5 @@
 /// <reference path="../types/custom-express-session/index.d.ts" />
 import { Router, Request, Response } from "express";
-import { SESSION_SECRET } from "../SECRET_KEYS.local";
-import session from "express-session";
-import cookieParser from "cookie-parser";
 import bcrypt from "bcrypt";
 import crypto from "crypto";
 import path from "path";
@@ -11,16 +8,6 @@ import { isAuthenticated } from "../middleware/isAuthenticated.js";
 
 export const loginRouter = Router();
 
-// --- Konfigurasjon ---
-loginRouter.use(cookieParser());
-loginRouter.use(
-    session({
-        secret: SESSION_SECRET,
-        resave: false,
-        saveUninitialized: false,
-        cookie: { secure: false } // Sett til true hvis du bruker HTTPS
-    })
-);
 
 // --- Login-side ---
 loginRouter.get("/login", (_, res: Response) => {
@@ -70,6 +57,7 @@ loginRouter.post("/login", (req: Request, res: Response) => {
                 [tokenHash, row.UserID, expires]
             );
 
+            console.log("niko")
             res.redirect("/admin");
         });
         return;
