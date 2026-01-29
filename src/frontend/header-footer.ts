@@ -46,20 +46,20 @@
     om.append(omOss, skolen);
 
     //Creating header
-    const burger = document.createElement("div")
-    burger.id = "burger-manu"
-
+    
     // Facebook image
     const facebookWrapper = document.createElement("a")
     facebookWrapper.id = "facebook-logo"
     facebookWrapper.href = "https://www.facebook.com/profile.php?id=61585411492643"
-
+    
     const facebookIMG = document.createElement("img")
     facebookIMG.src = "./img/Facebook_Logo_(2019).png";
     facebookWrapper.append(facebookIMG)
-
+    
     //Bruger
-
+    const burger = document.createElement("div")
+    burger.id = "burger-manu"
+    
     const burgerIMG = document.createElement("img")
     burgerIMG.src = "./img/burger.svg";
     burger.append(burgerIMG)
@@ -76,7 +76,6 @@
     logo.append(logoIMG)
 
 
-
     //menu
     
     const menuDiv = document.createElement('div')
@@ -85,10 +84,14 @@
     
     //close button
     
-    
     const closeButton = document.createElement('button')
     closeButton.id = "closeButton"
-    closeButton.innerText = "X"
+
+    const burgerIMG2 = document.createElement("img")
+    burgerIMG2.src = "./img/burger.svg";
+    closeButton.append(burgerIMG2)
+
+
     menuDiv.append(closeButton)
     
     
@@ -136,7 +139,7 @@
 
     //Produket button
 
-    const produketButton = document.createElement('button')
+    /*const produketButton = document.createElement('button')
     produketButton.id = "produketButton"
     produketButton.innerText = "Produkter"
 
@@ -152,7 +155,7 @@
 
     // Eventlistener produket
 
-    produketButton.addEventListener('click', produketClick)
+    produketButton.addEventListener('click', produketClick)*/
 
 
     // Login button
@@ -175,6 +178,8 @@
 
     loginButton.addEventListener('click', loginClick)
     
+    //Hjem logo
+
 
 })();
 

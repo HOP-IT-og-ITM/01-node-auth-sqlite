@@ -202,12 +202,15 @@ footer>div {
     line-height: 2em;
 }
 
+/*header*/
+
 header{
     display: flex;
     height: 4rem;
     background-color: rgba(255,255,255,0.2);
     padding: 10px;
     justify-content: space-between;
+    width: 100%;
 }
 
 header>#hopfiks-logo{
@@ -253,8 +256,8 @@ header>#hopfiks-logo>img{
 #burger-menu-content{
     position: absolute;
     top:0px;
-    background-color: rgb(103, 134, 155);
-    width: 20vw;
+    background-color: rgb(17, 107, 143);
+    width: 14vw;
     color: rgb(179, 219, 245);
     display: none;
 }
@@ -270,6 +273,19 @@ header>#hopfiks-logo>img{
     display: flex;
     flex-direction: column;
  }
+
+ #omOssButton {
+     background-color: rgb(110, 127, 138);
+ }
+ 
+ #closeButton {
+     display: flex;
+     justify-content: start;
+ }
+
+
+/*Produkter*/
+
 .pc-info {
     flex: 1;
 }
