@@ -132,7 +132,7 @@ footer>div {
     text-align: end;
     border: 2px solid black;
     border-radius: 15px;
-
+    color:#000;
     padding: 30px;
 
 }
@@ -154,17 +154,20 @@ footer>div {
     border-radius: .5em;
     z-index: 0;
     background: white;
+    color: #000;
 }
 
 
 .login-form div {
     position: relative;
+    color: #000;
 }
 
 .login-form div label {
     position: absolute;
     top: -1.25em;
     z-index: 10;
+    color: #000;
 }
 
 

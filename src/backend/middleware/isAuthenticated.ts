@@ -9,12 +9,21 @@ interface AuthQueryResult extends Pick<Bruker, 'UserID' | 'Navn'>, Pick<LoginTok
 }
 
 export function isAuthenticated(req: Request, res: Response, next: NextFunction) {
-    if (req.session?.user) return next();
+    console.log("[isAuthenticated] Session user:", req.session?.user);
+    if (req.session?.user) {
+        console.log("[isAuthenticated] User already in session, proceeding.");
+        return next();
+    }
 
     const rawToken = req.cookies?.["remember"];
-    if (!rawToken) return res.redirect("/login");
+    console.log("[isAuthenticated] Raw token from cookies:", rawToken);
+    if (!rawToken) {
+        console.log("[isAuthenticated] No remember token found, redirecting to /login");
+        return res.redirect("/login");
+    }
 
     const tokenHash = crypto.createHash("sha256").update(rawToken).digest("hex");
+    console.log("[isAuthenticated] Token hash:", tokenHash);
 
     // Henter både brukerinfo og rollenavn i én operasjon
     const sql = `
@@ -25,7 +34,14 @@ export function isAuthenticated(req: Request, res: Response, next: NextFunction)
         WHERE lt.Token = ?`;
 
     db.get(sql, [tokenHash], (err: Error | null, row: AuthQueryResult) => {
+        if (err) {
+            console.log("[isAuthenticated] DB error:", err);
+        } else {
+            console.log("[isAuthenticated] DB row:", row);
+        }
         if (err || !row || row.ExpirationDate < Date.now()) {
+            if (!row) console.log("[isAuthenticated] No row found for token.");
+            if (row && row.ExpirationDate < Date.now()) console.log("[isAuthenticated] Token expired:", row.ExpirationDate, "Current:", Date.now());
             return res.redirect("/login");
         }
 
@@ -35,7 +51,7 @@ export function isAuthenticated(req: Request, res: Response, next: NextFunction)
             navn: row.Navn,
             rolle: row.RolleNavn
         };
-
+        console.log("[isAuthenticated] Session user set:", req.session.user);
         return next();
     });
 }
