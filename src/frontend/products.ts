@@ -38,7 +38,7 @@ items.forEach((item) => {
 
     const pcButton = document.createElement('button')
     pcButton.className = "Produkter-button"
-    pcButton.textContent = "Kjøp"
+    pcButton.textContent = "View"
 
     pcInfo.append(pc_h3, Pc_p, pcSpan, pcButton)
     pcRow.append(pcImg, pcInfo)

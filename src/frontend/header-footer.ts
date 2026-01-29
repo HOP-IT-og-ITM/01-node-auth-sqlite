@@ -146,7 +146,7 @@
     //produketFunksjon
 
     function produketClick() {
-        window.location.href = "./produkter.html";
+        window.location.href = "./index.html";
     }
 
 
