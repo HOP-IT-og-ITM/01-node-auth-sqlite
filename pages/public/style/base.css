@@ -30,10 +30,10 @@ aside {
     line-height: normal;
 }
 
-
+/* 
 main {
-    background: rgba(255, 255, 255, 0.24);
-}
+    
+} */
 
 
 /* Set base font properties */
@@ -175,8 +175,11 @@ footer>div {
     display: flex;
     align-items: center;
     gap: 1.5rem;
-    padding: 1rem 0;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
     border-bottom: 1px solid #2a2f3a;
+    background: rgba(255, 255, 255, 0.24);
 
 }
 
