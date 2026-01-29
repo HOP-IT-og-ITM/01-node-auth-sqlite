@@ -263,10 +263,11 @@ header>#hopfiks-logo>img{
 #burger-menu-content{
     position: absolute;
     top:0px;
-    background-color: rgb(17, 107, 143);
+    background-color:rgb(52, 97, 127);
     width: 14vw;
     color: rgb(179, 219, 245);
     display: none;
+    margin-left: -10px;
 }
 
 
@@ -285,6 +286,7 @@ header>#hopfiks-logo>img{
  #omOssButton {
      background-color: rgb(63, 107, 136);
      color: rgb(255, 255, 255);
+     
  }
  
  #closeButton {
@@ -294,8 +296,13 @@ header>#hopfiks-logo>img{
 
  #loginButton {
     background-color: rgb(63, 107, 136);
-     color: rgb(255, 255, 255);
- }
+    color: rgb(255, 255, 255);
+     }
+
+    
+     #loginButton:hover {
+        background-color: rgb(100, 150, 180);
+     }
 
 
 /*Produkter*/
