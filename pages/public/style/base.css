@@ -264,7 +264,7 @@ header>#hopfiks-logo>img{
 
 
 #closeButton {
-    background-color: rgb(18, 118, 166);
+    background-color:rgb(52, 97, 127);
     color: white;
 
  }
@@ -272,15 +272,22 @@ header>#hopfiks-logo>img{
  #menuDiv {
     display: flex;
     flex-direction: column;
+
  }
 
  #omOssButton {
-     background-color: rgb(110, 127, 138);
+     background-color: rgb(63, 107, 136);
+     color: rgb(255, 255, 255);
  }
  
  #closeButton {
      display: flex;
      justify-content: start;
+ }
+
+ #loginButton {
+    background-color: rgb(63, 107, 136);
+     color: rgb(255, 255, 255);
  }
 
 

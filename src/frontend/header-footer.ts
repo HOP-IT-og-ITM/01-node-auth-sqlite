@@ -75,6 +75,9 @@
     logoIMG.src = "./img/rabbit.svg";
     logo.append(logoIMG)
 
+    const hjemButton = document.createElement('Button')
+    hjemButton.id = ""
+
 
     //menu
     
@@ -87,9 +90,9 @@
     const closeButton = document.createElement('button')
     closeButton.id = "closeButton"
 
-    const burgerIMG2 = document.createElement("img")
-    burgerIMG2.src = "./img/burger.svg";
-    closeButton.append(burgerIMG2)
+    const burgerIMGclose = document.createElement("img")
+    burgerIMGclose.src = "./img/burger.svg";
+    closeButton.append(burgerIMGclose)
 
 
     menuDiv.append(closeButton)
@@ -178,8 +181,7 @@
 
     loginButton.addEventListener('click', loginClick)
     
-    //Hjem logo
-
+    
 
 })();
 
