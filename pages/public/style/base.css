@@ -208,6 +208,8 @@ footer>div {
     line-height: 2em;
 }
 
+/*header*/
+
 header{
     width: 100%;
     display: flex;
@@ -215,6 +217,7 @@ header{
     background-color: rgba(255,255,255,0.2);
     padding: 10px;
     justify-content: space-between;
+    width: 100%;
 }
 
 header>#hopfiks-logo{
@@ -260,15 +263,16 @@ header>#hopfiks-logo>img{
 #burger-menu-content{
     position: absolute;
     top:0px;
-    background-color: rgb(103, 134, 155);
-    width: 20vw;
+    background-color:rgb(52, 97, 127);
+    width: 14vw;
     color: rgb(179, 219, 245);
     display: none;
+    margin-left: -10px;
 }
 
 
 #closeButton {
-    background-color: rgb(18, 118, 166);
+    background-color:rgb(52, 97, 127);
     color: white;
 
  }
@@ -276,7 +280,45 @@ header>#hopfiks-logo>img{
  #menuDiv {
     display: flex;
     flex-direction: column;
+
  }
+
+ #omOssButton {
+     background-color: rgb(63, 107, 136);
+     color: rgb(255, 255, 255);
+     
+ }
+ 
+ #closeButton {
+     display: flex;
+     justify-content: start;
+ }
+
+ #loginButton {
+    background-color: rgb(63, 107, 136);
+    color: rgb(255, 255, 255);
+ }
+
+    
+#loginButton:hover {
+    background-color: rgb(100, 150, 180);
+ }
+
+#omOssButton:hover {
+    background-color: rgb(100, 150, 180);
+}
+
+#produketButton {
+    background-color:rgb(63, 107, 136);
+    color: rgb(255, 255, 255);
+}
+
+#produketButton:hover{
+    background-color: rgb(100, 150, 180);
+}
+
+/*Produkter*/
+
 .pc-info {
     flex: 1;
 }
