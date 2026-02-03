@@ -121,6 +121,21 @@
 
     //
 
+    
+        //Produket button
+        
+        const produketButton = document.createElement('button')
+        produketButton.id = "produketButton"
+        produketButton.innerText = "Produkter"
+        
+        menuDiv.append(produketButton)
+        
+        
+    //produketFunksjon
+        
+        function produketClick() {
+             window.location.href = "./index.html";
+         }
 
     // Om oss button
 
@@ -141,25 +156,10 @@
     omOssButton.addEventListener('click', OmOssClick)
     
 
-    //Produket button
-
-    /*const produketButton = document.createElement('button')
-    produketButton.id = "produketButton"
-    produketButton.innerText = "Produkter"
-
-    menuDiv.append(produketButton)
-
-
-    //produketFunksjon
-
-    function produketClick() {
-        window.location.href = "./index.html";
-    }
-
 
     // Eventlistener produket
 
-    produketButton.addEventListener('click', produketClick)*/
+    produketButton.addEventListener('click', produketClick)
 
 
     // Login button

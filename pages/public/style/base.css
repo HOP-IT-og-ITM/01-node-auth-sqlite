@@ -297,13 +297,25 @@ header>#hopfiks-logo>img{
  #loginButton {
     background-color: rgb(63, 107, 136);
     color: rgb(255, 255, 255);
-     }
+ }
 
     
-     #loginButton:hover {
-        background-color: rgb(100, 150, 180);
-     }
+#loginButton:hover {
+    background-color: rgb(100, 150, 180);
+ }
 
+#omOssButton:hover {
+    background-color: rgb(100, 150, 180);
+}
+
+#produketButton {
+    background-color:rgb(63, 107, 136);
+    color: rgb(255, 255, 255);
+}
+
+#produketButton:hover{
+    background-color: rgb(100, 150, 180);
+}
 
 /*Produkter*/
 
