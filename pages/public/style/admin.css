@@ -31,6 +31,7 @@ main {
   justify-content: center;
   align-items: center;
   display: flex;
+  background-image: url(../img/Headerbild_Blog.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
