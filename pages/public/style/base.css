@@ -167,7 +167,7 @@ footer>div {
     position: absolute;
     top: -1.25em;
     z-index: 10;
-    color: #000;
+    color: #f5f4f4;
 }
 
 
@@ -344,3 +344,29 @@ header>#hopfiks-logo>img{
     color: #000;
 }
 
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: rgb(52, 97, 127, 0.9);
+  padding: 40px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+}
+
+.close {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+}

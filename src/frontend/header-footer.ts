@@ -69,7 +69,7 @@
 
     const logo = document.createElement("a")
     logo.id = "hopfiks-logo"
-    logo.href = "https://hopfiks.no/"
+    logo.href = "./index.html"
     header.append(burger, logo, facebookWrapper)
 
     const logoIMG = document.createElement("img")
