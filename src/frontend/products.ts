@@ -3,15 +3,15 @@ const productMain = document.getElementById("productMain")
 // temporary
 const items = [
     {
-        name: "testpc",
-        description: "God pc",
-        imgURL: "./img/test-pc1.avif",
-        price: "999 kr"
+        name: "optiplex",
+        description: "Optiplex 9010",
+        imgURL: "./img/optiplex.webp",
+        price: 1000
     }, {
         name: "testpc2",
         description: "God pc2",
         imgURL: "./img/test-pc1.avif",
-        price: "1999 kr"
+        price: 1999
     }
 ]
 
@@ -21,7 +21,7 @@ items.forEach((item) => {
     pcRow.className = "pc-row"
 
     const pcImg = document.createElement('img')
-    pcImg.src = "./img/test-pc1.avif"
+    pcImg.src = item.imgURL
 
     const pcInfo = document.createElement('div')
     pcInfo.className = "pc-info"
@@ -34,7 +34,7 @@ items.forEach((item) => {
 
     const pcSpan = document.createElement('span')
     pcSpan.className = "pris"
-    pcSpan.textContent = item.price.toString()
+    pcSpan.textContent = item.price.toString() + " kroner"
 
     const pcButton = document.createElement('button')
     pcButton.className = "Produkter-button"
