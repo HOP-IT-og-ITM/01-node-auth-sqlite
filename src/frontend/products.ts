@@ -28,7 +28,7 @@ const items = [
   }
 ]
 
-// ---------- MODAL ----------
+
 const modal = document.createElement("div")
 modal.className = "modal hidden"
 

@@ -30,10 +30,9 @@ aside {
     line-height: normal;
 }
 
-/* 
-main {
-    
-} */
+
+
+
 
 
 /* Set base font properties */
@@ -218,6 +217,7 @@ header{
     padding: 10px;
     justify-content: space-between;
     width: 100%;
+
 }
 
 header>#hopfiks-logo{
@@ -370,3 +370,6 @@ header>#hopfiks-logo>img{
   font-size: 24px;
   cursor: pointer;
 }
+
+
+
