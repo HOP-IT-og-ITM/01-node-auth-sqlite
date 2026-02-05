@@ -1,0 +1,9 @@
+body {
+    background-image: url("../img/om-oss.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+footer {
+    width: 600px;
+}
