@@ -1,3 +1,7 @@
+html,body{
+  height: 100%;
+}
+
 *,
 *::before,
 *::after {
@@ -10,7 +14,6 @@
 body {
   font-family: "Lato", sans-serif;
   transition: background-color .5s;
-
 }
 
 #headertext {
@@ -24,10 +27,11 @@ header {
   font-family: "Press Start 2P", system-ui;
   font-weight: 400;
   font-style: normal;
+  height: 10%;
 }
 
 main {
-  height: 40rem;
+  height: 80%;
   justify-content: center;
   align-items: center;
   display: flex;
@@ -39,7 +43,7 @@ main {
 
 footer {
   background-color: #1B262E;
-  height: 50px;
+  height: 10%;
   background-image: url("../img/name.svg");
   background-repeat: no-repeat;
   background-size: contain;
@@ -48,7 +52,7 @@ footer {
 
 #grad1 {
   display: flex;
-  height: 4.5rem;
+  height: 6rem;
   background-image: linear-gradient(to right, #006666, #00ffff);
   justify-content: center;
   align-items: center;
