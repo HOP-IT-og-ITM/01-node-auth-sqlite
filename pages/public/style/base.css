@@ -209,10 +209,14 @@ footer>div {
 }
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 /*header*/
 
 header{
     width: 100%;
+=======
+header {
+>>>>>>> Stashed changes
 =======
 header {
 >>>>>>> Stashed changes
@@ -269,10 +273,13 @@ header>#hopfiks-logo>img {
 #burger-menu-content {
     position: absolute;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     top:0px;
     background-color:rgb(52, 97, 127);
     width: 14vw;
 =======
+=======
+>>>>>>> Stashed changes
     top: 0px;
     background-color: rgb(103, 134, 155);
     width: 20vw;
@@ -292,6 +299,7 @@ header>#hopfiks-logo>img {
 #menuDiv {
     display: flex;
     flex-direction: column;
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 
  }
@@ -332,6 +340,10 @@ header>#hopfiks-logo>img {
 
 /*Produkter*/
 
+=======
+}
+
+>>>>>>> Stashed changes
 =======
 }
 
@@ -394,5 +406,9 @@ header>#hopfiks-logo>img {
 =======
 .pc-container>h1 {
     text-align: center;
+<<<<<<< Updated upstream
+}
+>>>>>>> Stashed changes
+=======
 }
 >>>>>>> Stashed changes
