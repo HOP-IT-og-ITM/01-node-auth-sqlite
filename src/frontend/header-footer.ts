@@ -131,7 +131,7 @@
         menuDiv.append(produketButton)
         
         
-    //produketFunksjon
+         //produketFunksjon
         
         function produketClick() {
              window.location.href = "./index.html";

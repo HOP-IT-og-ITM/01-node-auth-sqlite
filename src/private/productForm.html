@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="nb">
+    
+    <head>
+        <title>Hjemmeside | HopFiks.no</title>
+       <script src="../script/header-footer.js" defer></script>
+        <link rel="stylesheet" href="../style/productFrom.css">
+</head>
+
+<body>
+    <main>
+    <form class="product-form" method="POST" action="">
+        <h1>Legg til nytt produkt</h1>
+        
+        <label for="name">Produktnavn:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="category">Hva det er:</label>
+        <select id="category" name="category" required>
+            <option value="">Velg</option>
+            <option value="PC">PC</option>
+            <option value="skjerm">Skjerm</option>
+            <option value="tastatur">Tastatur</option>
+            <option value="mus">Mus</option>
+        </select>
+
+        <label for="image">Produktbilde:</label>
+        <input type="file" id="image" name="image" accept="image/*">
+        
+        <label for="price">Pris (NOK):</label>
+        <input type="number" id="price" name="price" step="0.01" required>
+        
+        <label for="description">Beskrivelse:</label>
+        <textarea id="description" name="description" rows="4" required></textarea>
+
+        <button type="submit">Legg til produkt</button>
+    </form>
+    </main>
+</body>
+
+
+</html>
