@@ -210,10 +210,14 @@ footer>div {
 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 /*header*/
 
 header{
     width: 100%;
+=======
+header {
+>>>>>>> Stashed changes
 =======
 header {
 >>>>>>> Stashed changes
@@ -274,10 +278,13 @@ header>#hopfiks-logo>img {
     position: absolute;
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     top:0px;
     background-color:rgb(52, 97, 127);
     width: 14vw;
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
     top: 0px;
@@ -299,6 +306,7 @@ header>#hopfiks-logo>img {
 #menuDiv {
     display: flex;
     flex-direction: column;
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 
@@ -348,6 +356,10 @@ header>#hopfiks-logo>img {
 }
 
 >>>>>>> Stashed changes
+=======
+}
+
+>>>>>>> Stashed changes
 .pc-info {
     flex: 1;
 }
@@ -373,6 +385,7 @@ header>#hopfiks-logo>img {
     color: #000;
 }
 
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 .modal {
   position: fixed;
@@ -410,5 +423,10 @@ header>#hopfiks-logo>img {
 }
 >>>>>>> Stashed changes
 =======
+}
+>>>>>>> Stashed changes
+=======
+.pc-container>h1 {
+    text-align: center;
 }
 >>>>>>> Stashed changes
