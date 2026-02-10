@@ -31,7 +31,7 @@
     footer.append(redaktør, bilde, om);
 
     const footerIMG = document.createElement("img");
-    footerIMG.src = "./img/footer-img.svg";
+    footerIMG.src = "./img/footer-animation.svg";
     bilde.append(footerIMG);
 
     const lederText = document.createElement("p");
