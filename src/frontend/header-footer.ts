@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <link rel="icon" href="./img/rabbit.svg" type="image/svg+xml">
+    <script src="./script/header-footer.js" defer></script>
     <script src="./script/products.js" defer></script>
     `;
     const header = document.createElement("header");
