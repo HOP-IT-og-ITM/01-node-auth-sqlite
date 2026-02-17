@@ -1,20 +1,6 @@
 (() => {
     const body = document.body;
-    const head = document.head;
     if (!body) return;
-    if (!head) return;
-    head.innerHTML = `
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/base.css">
-    <link rel="stylesheet" href="./style/om-oss.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    <link rel="icon" href="./img/rabbit.svg" type="image/svg+xml">
-    <script src="./script/products.js" defer></script>
-    `;
     const header = document.createElement("header");
     const footer = document.createElement("footer");
     //header.innerHTML = "<h1> YO dude</h1>";
@@ -59,7 +45,7 @@
     
     //Bruger
     const burger = document.createElement("div")
-    burger.id = "burger-manu"
+    burger.id = "burger-menu"
     
     const burgerIMG = document.createElement("img")
     burgerIMG.src = "./img/burger.svg";
@@ -70,7 +56,7 @@
 
     const logo = document.createElement("a")
     logo.id = "hopfiks-logo"
-    logo.href = "./index.html"
+    logo.href = "./"
     header.append(burger, logo, facebookWrapper)
 
     const logoIMG = document.createElement("img")
