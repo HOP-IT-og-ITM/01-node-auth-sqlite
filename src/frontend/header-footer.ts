@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <link rel="icon" href="./img/rabbit.svg" type="image/svg+xml">
+    <script src="./script/products.js" defer></script>
     `;
     const header = document.createElement("header");
     const footer = document.createElement("footer");
@@ -29,7 +30,7 @@
     footer.append(redaktør, bilde, om);
 
     const footerIMG = document.createElement("img");
-    footerIMG.src = "./img/footer-img.svg";
+    footerIMG.src = "./img/footer-animation.svg";
     bilde.append(footerIMG);
 
     const lederText = document.createElement("p");
@@ -69,7 +70,7 @@
 
     const logo = document.createElement("a")
     logo.id = "hopfiks-logo"
-    logo.href = "https://hopfiks.no/"
+    logo.href = "./index.html"
     header.append(burger, logo, facebookWrapper)
 
     const logoIMG = document.createElement("img")
@@ -131,7 +132,7 @@
         menuDiv.append(produketButton)
         
         
-    //produketFunksjon
+         //produketFunksjon
         
         function produketClick() {
              window.location.href = "./index.html";
