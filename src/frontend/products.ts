@@ -2,30 +2,38 @@ const productMain = document.getElementById("productMain")
 
 // temporary
 const items = [
-  {
-    name: "optiplex",
-    description: "Optiplex 9010",
-    imgURL: "./img/optiplex.webp",
-    price: 1000,
-    specs: {
-      cpu: "Intel i5-3470",
-      gpu: "Intel HD Graphics",
-      ram: "8GB DDR3",
-      storage: "256GB SSD"
+    {
+        name: "optiplex",
+        title: "Optiplex 9010",
+        description: "En supergod datamaskin du vil kunne ha nytte av veldig lenge!",
+        imgURL: "./img/optiplex.webp",
+        price: 1000,
+        specs: {
+            cpu: "Intel i5-3470",
+            gpu: "Intel HD Graphics",
+            ram: "8GB DDR3",
+            storage: "256GB SSD",
+            motherboard: ""
+        },
+        os: "",
+        forSale: false
+    },
+    {
+        name: "testpc2",
+        title: "God pc2",
+        description: "En veldig GOD PC!!",
+        imgURL: "./img/test-pc1.avif",
+        price: 1999,
+        specs: {
+            cpu: "Ryzen 5 5600",
+            gpu: "RTX 3060",
+            ram: "16GB DDR4",
+            storage: "1TB NVMe SSD",
+            motherboard: ""
+        },
+        os: "",
+        forSale: false
     }
-  },
-  {
-    name: "testpc2",
-    description: "God pc2",
-    imgURL: "./img/test-pc1.avif",
-    price: 1999,
-    specs: {
-      cpu: "Ryzen 5 5600",
-      gpu: "RTX 3060",
-      ram: "16GB DDR4",
-      storage: "1TB NVMe SSD"
-    }
-  }
 ]
 
 
@@ -49,54 +57,54 @@ document.body.append(modal)
 
 // close modal
 modal.querySelector(".close")?.addEventListener("click", () => {
-  modal.classList.add("hidden")
+    modal.classList.add("hidden")
 })
 
 modal.addEventListener("click", (e) => {
-  if (e.target === modal) {
-    modal.classList.add("hidden")
-  }
+    if (e.target === modal) {
+        modal.classList.add("hidden")
+    }
 })
 
 // ---------- PRODUCTS ----------
 items.forEach((item) => {
 
-  const pcRow = document.createElement("div")
-  pcRow.className = "pc-row"
+    const pcRow = document.createElement("div")
+    pcRow.className = "pc-row"
 
-  const pcImg = document.createElement("img")
-  pcImg.src = item.imgURL
+    const pcImg = document.createElement("img")
+    pcImg.src = item.imgURL
 
-  const pcInfo = document.createElement("div")
-  pcInfo.className = "pc-info"
+    const pcInfo = document.createElement("div")
+    pcInfo.className = "pc-info"
 
-  const pc_h3 = document.createElement("h3")
-  pc_h3.textContent = item.name
+    const pc_h3 = document.createElement("h3")
+    pc_h3.textContent = item.name
 
-  const pc_p = document.createElement("p")
-  pc_p.textContent = item.description
+    const pc_p = document.createElement("p")
+    pc_p.textContent = item.description
 
-  const pcSpan = document.createElement("span")
-  pcSpan.className = "pris"
-  pcSpan.textContent = item.price + " kroner"
+    const pcSpan = document.createElement("span")
+    pcSpan.className = "pris"
+    pcSpan.textContent = item.price + " kroner"
 
-  const pcButton = document.createElement("button")
-  pcButton.className = "Produkter-button"
-  pcButton.textContent = "View"
+    const pcButton = document.createElement("button")
+    pcButton.className = "Produkter-button"
+    pcButton.textContent = "View"
 
-  // open modal with correct specs
-  pcButton.addEventListener("click", () => {
-    (document.getElementById("modal-title") as HTMLElement).textContent = item.name;
-    (document.getElementById("modal-cpu") as HTMLElement).textContent = item.specs.cpu;
-    (document.getElementById("modal-gpu") as HTMLElement).textContent = item.specs.gpu;
-    (document.getElementById("modal-ram") as HTMLElement).textContent = item.specs.ram;
-    (document.getElementById("modal-storage") as HTMLElement).textContent = item.specs.storage
+    // open modal with correct specs
+    pcButton.addEventListener("click", () => {
+        (document.getElementById("modal-title") as HTMLElement).textContent = item.name;
+        (document.getElementById("modal-cpu") as HTMLElement).textContent = item.specs.cpu;
+        (document.getElementById("modal-gpu") as HTMLElement).textContent = item.specs.gpu;
+        (document.getElementById("modal-ram") as HTMLElement).textContent = item.specs.ram;
+        (document.getElementById("modal-storage") as HTMLElement).textContent = item.specs.storage
 
-    modal.classList.remove("hidden")
-  })
+        modal.classList.remove("hidden")
+    })
 
-  pcInfo.append(pc_h3, pc_p, pcSpan, pcButton)
-  pcRow.append(pcImg, pcInfo)
+    pcInfo.append(pc_h3, pc_p, pcSpan, pcButton)
+    pcRow.append(pcImg, pcInfo)
 
-  productMain?.append(pcRow)
+    productMain?.append(pcRow)
 })
