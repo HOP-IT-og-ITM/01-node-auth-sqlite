@@ -2,9 +2,9 @@ const productMain = document.getElementById("productMain")
 
 // temporary
 const items = [
-    {
-        name: "optiplex",
-        title: "Optiplex 9010",
+        {
+        name: "Dell Optiplex 9010",
+        title: "DL01",
         description: "En supergod datamaskin du vil kunne ha nytte av veldig lenge!",
         imgURL: "./img/optiplex.webp",
         price: 1000,
@@ -13,9 +13,25 @@ const items = [
             gpu: "Intel HD Graphics",
             ram: "8GB DDR3",
             storage: "256GB SSD",
+            motherboard: "LGA"
+        },
+        os: "Windows 8 Pro",
+        forSale: false
+    },
+    {
+        name: "Fujitsu esprimo D556/2/E85+",
+        title: "FJ04",
+        description: "En supergod datamaskin du vil kunne ha nytte av veldig lenge!",
+        imgURL: "./img/optiplex.webp",
+        price: 1000,
+        specs: {
+            cpu: "Intel i5-7400",
+            gpu: "",
+            ram: "8GB DDR4",
+            storage: "256GB SSD",
             motherboard: ""
         },
-        os: "",
+        os: "Windows 11 PRO",
         forSale: false
     },
     {
