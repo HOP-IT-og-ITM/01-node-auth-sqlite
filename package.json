@@ -26,20 +26,16 @@
   },
   "homepage": "https://github.com/HOP-IT-og-ITM/01-node-auth-sqlite#readme",
   "dependencies": {
-    "@types/bcrypt": "^6.0.0",
-    "@types/cookie-parser": "^1.4.10",
-    "@types/sqlite3": "^3.1.11",
-    "bcrypt": "^6.0.0",
-    "concurrently": "^9.2.1",
-    "cookie-parser": "^1.4.7",
     "express": "^5.2.1",
-    "express-session": "^1.18.2",
     "sqlite3": "^5.1.7"
   },
   "devDependencies": {
+    "@types/bcrypt": "^6.0.0",
+    "@types/cookie-parser": "^1.4.10",
     "@types/express": "^5.0.6",
     "@types/express-session": "^1.18.2",
-    "@types/node": "^25.0.6",
-    "nodemon": "^3.1.11"
+    "bcrypt": "^6.0.0",
+    "cookie-parser": "^1.4.7",
+    "express-session": "^1.19.0"
   }
 }
